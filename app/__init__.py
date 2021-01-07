@@ -56,8 +56,6 @@ def create_app(config_class=Config):
     moment.init_app(app)
     #babel.init_app(app)
 
-
-
     #Blue print for Admin , Auth and Home
     from app.admin import bp as admin_bp
     app.register_blueprint(admin_bp, url_prefix='/admin')
@@ -74,6 +72,23 @@ def create_app(config_class=Config):
     from app.ditto import bp as ditto_bp
     app.register_blueprint(ditto_bp)
 
+    #stdout log for deployment
+    if app.config['LOG_TO_STDOUT']:
+        stream_handler = logging.StreamHandler()
+        stream_handler.setLevel(logging.INFO)
+        app.logger.addHandler(stream_handler)
+    else:
+        if not os.path.exists('logs'):
+            os.mkdir('logs')
+        file_handler = RotatingFileHandler('logs/expat-hr.log', maxBytes=10240, backupCount=10)
+        file_handler.setFormatter(logging.Formatter(
+                '%(asctime)s %(levelname)s: %(message)s '
+                '[in %(pathname)s:%(lineno)d]'))
+        file_handler.setLevel(logging.INFO)
+        app.logger.addHandler(file_handler)
+        app.logger.setLevel(logging.INFO)
+        app.logger.info('expat-hr startup')
+
 
     #loading the js file 
     js = Bundle('app.js', 'bootstrap-datetimepicker.min.js', 'bootstrap.min.js', 'chart.js', 'dataTables.bootstrap4.min.js', 'dropfiles.js','fullcalendar.min.js', 'jquery.ui.touch-punch.min.js', 'jquery.slimscroll.min.js', 'mask.js', 'moment.min.js', 'multiselect.min.js', 'popper.min.js', 'select2.min.js','main.js', 'task.js', 'jquery-3.2.1.min.js','jquery.ui.touch-punch.min.js','jquery.maskedinput.min.js','chart.js','jquery.dataTables.min.js',   output='gen/fade.js' )
@@ -88,11 +103,5 @@ def create_app(config_class=Config):
    
     return app
 
-"""
-#@babel.localeselector
-#def get_locale():
-    #return request.accept_languages.best_match(current_app.config['LANGUAGES'])
 
-"""
-from app import views, models
 
