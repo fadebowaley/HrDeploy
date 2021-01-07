@@ -1,0 +1,405 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Expat Care HRMS Application</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico in the root directory -->
+    <link href="{{ url_for('static', filename='img/favicon.png') }}" type="img/x-icon" rel="shortcut icon">
+    <!-- All css files are included here. -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/vendor/iconfont.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/vendor/helper.css') }}">
+
+
+    <!-- <link rel="stylesheet" href="assets/css/plugins/plugins.css"> -->
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+
+    <!-- Use the minified version files listed below for better performance and remove the files listed above -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/plugins/plugins.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.min.css') }}">
+
+    <script src="{{ url_for('static', filename='js/vendor/modernizr-3.10.0.min.js') }}"></script>
+   
+</head>
+
+<body class="template-color-4">
+
+    <div id="main-wrapper" class="bg_image-hv4 section">
+
+
+
+        <!--Header section start-->
+        <header class="header-absolute black-logo-version header-sticky sticky-white no-padding d-none d-lg-block pt-25 pb-25">
+            <div class="main-header">
+                <div class="container-fluid pl-90 pl-lg-15 pl-md-15 pr-90 pr-lg-15 pr-md-15">
+                    <div class="row align-items-center no-gutters">
+
+                        <!--Logo start-->
+                        <div class="col-xl-2 col-lg-2 col-12">
+                            <div class="logo">
+                                <a href="#"></a><img src="{{ url_for('static', filename='img/logo2.png') }}" width="40" height="40" alt=""></a>
+                               
+                            </div>
+                        </div>
+                        <!--Logo end-->
+
+                        <!--Menu start-->
+                            <!--Menu start-->
+                        <div class="col-xl-7 col-lg-7 col-12">
+                            <nav class="main-menu">
+                                <ul>
+                                    <!--<li><a href="index-4.html">Home </a></li>                              
+                                     <li><a href="about.html">About us</a></li>
+                                    <li><a href="faq.html">FAQS</a></li>                             
+                                     <li><a href="contact.html">Contact Us</a></li>
+                                   <li><a href="login-register.html">Login & Register</a></li>
+                                    <li><a href="404.html">404 Error</a></li> -->
+                                    
+                                  
+                                </ul>
+                            </nav>
+                        </div>
+                        <!--Menu end-->
+                        <!--Menu end-->
+
+                        <!-- Cart & Search Area Start -->
+                        <div class="col-xl-3 col-lg-3 col-12">
+                            <div class="header-btn-action">
+                                <div class="btn-action-wrap d-flex justify-content-end justify-content-xl-between">
+                                    <div class="jp-author item">
+                                        <a href="{{ url_for('auth.login') }}"><span>Login</span></a>
+                                        <a href="{{ url_for('auth.register') }}" class="d-desktop-none"><span>/Register</span></a>
+                                    </div>
+                                    <div class="jp-author-action-two ml-lg-0 item">
+                                        <a class="ht-btn header-btn" href="#quick-view-modal-container" data-toggle="modal">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cart & Search Area End -->
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <!--Header section end-->
+
+
+        <!--slider section start-->
+        <div class="hero-section section position-relative">
+            <!--Hero Item start-->
+            <div class="hero-item hero-item-four bg_image-v4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <!--Hero Content start-->
+                            <div class="hero-content-5 left">
+                                <h2 class="title">Expat Care HRMS - Your Global Mobility Partner </i> </h2>
+                                <h5>Inspired by CS50x - Web Project</h5>
+                                
+                                <a href="#" class="ht-btn normal-btn">Get Started</a>
+                                <a href="https://www.youtube.com/watch?v=XSGBVzeBUbk" class="play-btn venobox" data-autoplay="true" data-vbtype="video"><i class="far fa-play-circle"></i> See Our Introduction</a>
+
+                            </div>
+                            <!--Hero Content end-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Hero Item end-->
+        </div>
+        <!--slider section end-->
+
+                
+       
+        <!-- Service Section Start -->
+        <div class="service-section section pb-80 pb-lg-60 pb-md-40 pb-sm-25 pb-xs-15">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Section Title Start -->
+                        <div class="section-title-three mb-45 mb-xs-20">
+                            <h2>Here's why every Expatriates <br>
+                            have chosen Expat Care</h2>
+                        </div>
+                        <!-- Section Title End -->
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-6">
+                        <!-- Single Service Start -->
+                        <div class="single-service mb-30">
+                            <div class="service-img">
+                                <img src="{{ url_for('static', filename='img/service/illus-1.jpg') }}"  alt="">
+                                </div>
+                            <div class="service-content">
+                                <h3 class="title">Understanding Your Needs</h3>
+                                <p>Managing your expatriates will be a lot more easier when you dont loose track of Important renewals, 
+                                    licences or special days like Birthday or work Anniversary</p>
+                                <a href="#">Learn more <i class="lnr lnr-chevron-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- Single Service End -->
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <!-- Single Service Start -->
+                        <div class="single-service mb-30">
+                            <div class="service-img">
+                            <img src="{{ url_for('static', filename='img/service/illus-2.jpg') }}"  alt="">
+                            </div>
+                            <div class="service-content">
+                                <h3 class="title">The Best Offer</h3>
+                                <p>Expatkia offer the best value for money while giving you peace of mind. we manage your resources for your assignment while  job.</p>
+                                <a href="#">Learn more <i class="lnr lnr-chevron-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- Single Service End -->
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <!-- Single Service Start -->
+                        <div class="single-service mb-30">
+                            <div class="service-img">
+                             <img src="{{ url_for('static', filename='img/service/illus-3.jpg') }}"  alt="">
+                            </div>
+                            <div class="service-content">
+                                <h3 class="title">Powerful Tools</h3>
+                                <p>Our Application helps you track and Monitors your your Assignment lifecycle while giving you peace of Mind in a foreign Land </p>
+                                <a href="#">Learn more <i class="lnr lnr-chevron-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- Single Service End -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Service Section End -->
+
+      
+        <!-- Newsletter Section Start -->
+        <div class="newsletter-section section pt-120 pt-lg-90 pt-md-70 pt-sm-50 pt-xs-40 pb-120 pb-lg-100 pb-md-95 pb-sm-120 pb-xs-110">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="section-title-three">
+                            <h2 class="title">Subscribe to get updates on
+                                new notifications</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="newsletter">
+                            <p>Join our email subscription now to get updates on <strong>HR tips</strong> and <strong>expat services</strong>.</p>
+                            <div class="newsletter-form">
+                                <form id="mc-form" class="mc-form">
+                                    <input type="email" placeholder="Enter Your email..." required="" name="EMAIL">
+                                    <button class="ht-btn small-btn team-btn" type="submit" value="submit">Subscribe</button>
+                                </form>
+                            </div>
+                            <!-- mailchimp-alerts Start -->
+                            <div class="mailchimp-alerts">
+                                <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+                                <div class="mailchimp-success"></div><!-- mailchimp-success end -->
+                                <div class="mailchimp-error"></div><!-- mailchimp-error end -->
+                            </div>
+                            <!-- mailchimp-alerts end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Newsletter Section End -->
+
+        <!--Footer section start-->
+        <footer class="footer-section section">
+
+            <!-- Footer Top Section Start -->
+            <div class="footer-top-section section st-border pt-120 pt-lg-100 pt-md-80 pt-sm-55 pt-xs-45 pb-80 pb-lg-60 pb-md-40 pb-sm-20 pb-xs-20">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-xl-4 col-lg-3 col-md-6">
+                            <!-- Footer Widget Start -->
+                            <div class="footer-widget mb-30">
+                                <h6 class="title">Contact Info</h6>
+                                <div class="address">
+                                    <i class="lnr lnr-map-marker"></i>
+                                    <span>km 46 Lagos Ibadan Expressway, Mowe OGUN, Nigeria</span>
+                                </div>
+                                <div class="email">
+                                    <i class="lnr lnr-envelope"></i>
+                                    <span>call@expartkia.ng</span>
+                                </div>
+                                <div class="phone theme-color">(+234) 080 271-80715</div>
+                            </div>
+                            <!-- Footer Widget End -->
+                        </div>
+
+                        <div class="col-xl-2 col-lg-2 col-md-6">
+                            <!-- Footer Widget Start -->
+                            <div class="footer-widget mb-30">
+                                <h6 class="title">Company</h6>
+                                <div class="footer-widget-link">
+                                    <ul>
+                                        <li><a href="#">Terms And Conditions</a></li>
+                                        <li><a href="#">Partner</a></li>
+                                        <li><a href="#">Help Center</a></li>
+                                        <li><a href="#">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Footer Widget End -->
+                        </div>
+
+                        <div class="col-xl-2 col-lg-3 col-md-6">
+                            <!-- Footer Widget Start -->
+                            <div class="footer-widget mb-30">
+                                <h6 class="title">Help Center</h6>
+                                <div class="footer-widget-link">
+                                    <ul>
+                                        <li><a href="#">Immigration Service</a></li>
+                                        <li><a href="#">Expat Care Marketing</a></li>
+                                        <li><a href="#">Web & Software Dev</a></li>
+                                        <li><a href="#">Tools & Analitycs</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Footer Widget End -->
+                        </div>
+
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <!-- Footer Widget Start -->
+                            <div class="footer-widget mb-30">
+                                <div class="footer-widget-image d-flex justify-content-start justify-content-lg-end">
+                                    <a class="mr-5" href ="#"><img src="{{ url_for('static', filename='img/app-store/app-store-2.png') }}"  alt=""></a>
+                                    <a class="mr-5" href ="#"><img src="{{ url_for('static', filename='img/app-store/app-chplay-2.png') }}"  alt=""></a>
+                                
+                                </div>
+                            </div>
+                            <!-- Footer Widget End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Top Section End -->
+
+            <!--Footer bottom start-->
+            <div class="footer-bottom section fb-60">
+                <div class="container">
+                    <div class="row no-gutters st-border pt-35 pb-35 align-items-center justify-content-between">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="copyright">
+                                <p>&copy;2020 <a href="#">Expat Care Solutions</a>. All rights reserved.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="footer-social">
+                                <p>Follow Us</p>
+                                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                <a href="#"><i class="fab fa-pinterest-square"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Footer bottom end-->
+
+        </footer>
+        <!--Footer section end-->
+
+        <!-- Modal Area Strat -->
+        <div class="modal fade quick-view-modal-container" id="quick-view-modal-container" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="row no-gutters">
+                                <h1> CS50X HAVARD PROJECT</h1>
+                                <P>An HRMS (Human resources Management System) application built on Python flask that helps expatriates or people working on skills visa on foreign nations to manage their documents and get notification on important dates like expiry dates of their travelling  documents and permits.</P>
+                   
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+            </div>
+        </div>
+        <!-- Modal Area End -->
+
+
+        <!-- Placed js at the end of the document so the pages load faster -->
+
+
+    
+
+    <!-- Placed js at the end of the document so the pages load faster -->
+
+    <!-- All jquery file included here -->
+    <script src="{{ url_for('static', filename='js/vendor/jquery-3.5.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/jquery-migrate-3.1.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- <script src="assets/js/plugins/plugins.js"></script> -->
+
+    <!-- Use the minified version files listed below for better performance and remove the files listed above -->
+    <script src="{{ url_for('static', filename='js/plugins/plugins.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main2.js') }}"></script>
+
+
+    <!-- Live Chat Script -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-132749328-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-132749328-1');
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '223900361524792');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=223900361524792&ev=PageView&noscript=1"></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <!--Start of Zendesk Chat Script-->
+    <script type="text/javascript">
+    window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+    d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+    _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+    $.src="https://v2.zopim.com/?3kYiQe6pwvLdslIO7gS1vT0Yxk7Lh9Jf";z.t=+new Date;$.
+    type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+    </script>
+    <!--End of Zendesk Chat Script-->
+
+</body>
+
+</html>

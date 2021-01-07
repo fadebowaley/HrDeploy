@@ -1,0 +1,111 @@
+{% import "bootstrap/utils.html" as utils %}
+{% extends "base.html" %}
+{% block title %}Roles{% endblock %}
+{% block body %}
+
+
+<!-- Page Wrapper -->
+<div class="page-wrapper">
+			
+    <!-- Page Content -->
+    <div class="content container-fluid">
+    
+        <!-- Page Header -->
+        <div class="page-header">
+                <div class="row align-items-center">
+                <div class="col">
+                  <br>  {{ utils.flashed_messages() }} </br>
+                    <h3 class="page-title">Roles </h3>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Admin Only</li>  
+                    </ul>
+                </div>
+                <div class="col-auto float-right ml-auto">
+                    <a href="{{ url_for('admin.add_role') }}" class="btn add-btn" ><i class="fa fa-plus"></i> Add Roles</a>
+                    <div class="view-icons">
+                        <a href="#" class="grid-view btn btn-link"><i class="fa fa-th"></i></a>
+                        <a href=#" class="list-view btn btn-link active"><i class="fa fa-bars"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Page Header -->
+        
+        <!-- Search Filter -->
+        <div class="row filter-row">
+            <div class="col-sm-6 col-md-3">  
+                <div class="form-group form-focus">
+                    <input type="text" class="form-control floating">
+                    <label class="focus-label">Employee ID</label>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">  
+                <div class="form-group form-focus">
+                    <input type="text" class="form-control floating">
+                    <label class="focus-label">Employee Name</label>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">  
+                <div class="form-group form-focus">
+                    <input type="text" class="form-control floating">
+                    <label class="focus-label">Mobile Number</label>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">  
+                <a href="#" class="btn btn-success btn-block"> Search </a>  
+            </div>     
+        </div>
+        <!-- /Search Filter -->
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    {% if roles %}
+                    <table class="table table-striped custom-table datatable">
+                        <thead>
+                            <tr>
+                                <th>Role Name</th>
+                                <th>Role Description</th>
+                                <th class="text-right no-sort">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for role in roles %}
+                            <tr>
+                                <td>
+                                    <h2 class="table-avatar">
+                                        <a href="#" class="avatar"><img alt="" src="static/img/profiles/avatar-02.jpg"></a>
+                                        <a href="#"> {{ role.name }}  <span> Company </span></a>
+                                    </h2>
+                                </td>
+                                
+                                <td>{{ role.description }}</td>
+                                
+                                
+                                <td><a href="{{ url_for('admin.edit_role', id=role.id) }}" class="btn btn-warning btn-rounded ">edit</a>  <td>
+                                <td><a href="{{ url_for('admin.delete_role', id=role.id) }}" class=" btn btn-success  btn-rounded " >view</a> </td>
+                                <td><a href="{{ url_for('admin.delete_role', id=role.id) }}" class=" btn btn-danger  btn-rounded " >Delete</a> </td>
+                            </tr>
+                            {% endfor %}
+                            
+                                
+                        </tbody>
+                    </table>
+
+                    {% else %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    <!-- /Page Content -->
+    
+    <!-- Add Employee Modal -->
+   
+<!-- /Page Wrapper -->
+
+</div>
+<!-- /Main Wrapper -->
+
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}Cerpac{% endblock %}
+{% block body %}
+<div class="page-wrapper">
+    <div class="content container-fluid">
+        
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="row">
+                <div class="col">
+                    <h3 class="page-title">Departments </h3>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Admin Only</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                      <h4 class="card-title mb-0">One Departments</h4> 
+                    </div>
+                 
+                    <div class="card-body">
+                        <thead>
+                            <tr>
+                                <th>Departments Name</th>
+                                <th>Departments Name</th>
+                                <th>Departments Description</th>
+                                <th class="text-right no-sort">Action</th>
+                            </tr>
+                        </thead>
+                      
+
+                        <ul>
+                           <li><h1> {{ department.id }}</h1></li>
+                        <li><h1> {{ department.name }}</h1></li> 
+                       <li><h1>{{ department.description }}</h1></li> 
+                       <p>Current time: {{ momentjs(timestamp).calendar() }}</p>
+<br/>
+<p>Time: {{momentjs(timestamp).format('YYYY-MM-DD HH:mm:ss')}}</p>
+<br/>
+<p>From now: {{momentjs(timestamp).fromNow()}}</p> 
+                    </ul>
+                       
+                        
+                    </div>
+
+                </div>
+            
+
+            </div>
+        </div>
+    
+    </div>			
+</div>
+<!-- /Main Wrapper -->
+
+
+{% endblock %}

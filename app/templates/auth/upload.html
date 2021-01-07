@@ -1,0 +1,40 @@
+
+<!-- Page Wrapper -->
+<div class="page-wrapper">
+    <div class="media">
+        <!doctype html>
+        <html>
+          <head>
+            <title>File Upload</title>
+          </head>
+          <body>
+              <div>
+            <h1>File Upload</h1>
+            <form method="POST" action="" enctype="multipart/form-data">
+           <p><input type="file" name="file"></p>
+
+           <!-- <p><input type="file" name="file" multiple></p>-->
+           <!--<input type="file" name="doc_file" accept=".doc,.docx">
+           <input type="file" name="image_file" accept="image/*">-->
+
+              <p><input type="submit" value="Submit"></p>
+            </form>
+
+
+            <hr>
+            {% for file in files %}
+              <img src="{{ url_for('auth.upload', filename=file) }}" style="width: 64px">
+            {% endfor %}
+          
+   
+      
+    </div>
+
+    
+</div>
+    <!-- /Page Wrapper -->
+    
+    </div>
+    <!-- /Main Wrapper -->
+        </body>
+        </html>
