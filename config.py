@@ -15,7 +15,7 @@ class Config(object):
     TESTING = False
     CSRF_ENABLED = True
     SECRET_KEY = 'this-really-needs-to-be-changed'
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:root@/exparty'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:postgres@localhost/exparty'
     LOG_TO_STDOUT = os.environ.get('LOG_TO_STDOUT')
     #SQLALCHEMY_TRACK_MODIFICATIONS = False
     #MAIL_SERVER = os.environ.get('MAIL_SERVER')
